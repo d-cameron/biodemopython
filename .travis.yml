@@ -5,8 +5,9 @@ language: python
 python:
   - "3.4"
 
-before_install:
-  - ./.travis/install-dependencies.sh  
+install:
+ - pip install pylint
+ - pip install .
 
 script:
   - ./functional_tests/biodemopython-test.sh -p biodemopython -d functional_tests/test_data
